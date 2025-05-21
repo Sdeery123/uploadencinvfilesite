@@ -55,6 +55,13 @@
             <div class="feature-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Automatic BASE64 Encoding</h3>
+                    <p>Intelligently detects file formats and automatically handles BASE64 encoding - no manual encoding required!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <h3>Format Validation</h3>
@@ -98,7 +105,7 @@
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Select Your BIF File</h3>
-                        <p>Browse and select your BIF format file. The application automatically detects if it's already encoded.</p>
+                        <p>Browse and select your BIF format file. The application <strong>automatically detects if your file is already BASE64 encoded</strong> and handles encoding for you if needed - no manual encoding required!</p>
                     </div>
                 </div>
                 <div class="workflow-step">
@@ -184,7 +191,16 @@
                         <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>BASE64 encoding converts binary data into a text format that can be safely transmitted over systems that handle text only. Invoice Cloud requires BIF files to be BASE64 encoded to ensure reliable transmission across different systems.</p>
+                        <p>BASE64 encoding converts binary data into a text format that can be safely transmitted over systems that handle text only. While Invoice Cloud offers this as an optional endpoint to enhance secure file transmission, <strong>BIF Uploader automatically handles this encoding for you</strong>, so you don't need to worry about manually encoding your files.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do I need to encode my files before uploading?
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No! BIF Uploader intelligently detects whether your file is already encoded. If it's not, the application will automatically encode it for you during the upload process. You can simply select your raw BIF file and the application handles everything else.</p>
                     </div>
                 </div>
                 <div class="faq-item">
