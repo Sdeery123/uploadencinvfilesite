@@ -8,6 +8,222 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="images/uploadencinvfile.ico" type="image/x-icon">
+    <style>
+        /* Enhanced visual elements */
+        .feature-card, .download-card, .workflow-step {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .feature-card:hover, .download-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+
+            .workflow-step:hover {
+                transform: scale(1.02);
+            }
+
+        .btn {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+            .btn:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                background: rgba(255,255,255,0.2);
+                transition: width 0.3s ease;
+                z-index: -1;
+            }
+
+            .btn:hover:before {
+                width: 100%;
+            }
+
+        /* Animated section dividers */
+        section:not(:last-child)::after {
+            content: '';
+            display: block;
+            margin: 3rem auto;
+            width: 70%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent);
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Enhanced FAQ interactions */
+        .faq-question {
+            cursor: pointer;
+        }
+
+        .faq-item {
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            .faq-item:hover {
+                background-color: rgba(0,0,0,0.02);
+            }
+
+        /* Dark theme improvements */
+        .dark-theme section:not(:last-child)::after {
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+        }
+
+        .dark-theme .faq-item:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Pulse animation for download button */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0,123,255, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(0,123,255, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(0,123,255, 0);
+            }
+        }
+
+        #download-btn {
+            animation: pulse 2s infinite;
+        }
+
+        /* Mobile menu toggle */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* Demo GIF Section */
+        .demo-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: rgba(0,0,0,0.03);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .demo-container:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            }
+
+        .demo-gif {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .demo-caption {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .dark-theme .demo-container {
+            background: rgba(255,255,255,0.05);
+        }
+
+        .dark-theme .demo-caption {
+            color: #ccc;
+        }
+
+        .screen-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .screen-tab {
+            padding: 0.5rem 1rem;
+            background: #f0f0f0;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+            .screen-tab:hover, .screen-tab.active {
+                background: #007bff;
+                color: white;
+            }
+
+        .dark-theme .screen-tab {
+            background: #333;
+            color: #ddd;
+        }
+
+            .dark-theme .screen-tab:hover, .dark-theme .screen-tab.active {
+                background: #0056b3;
+            }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #fff;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+
+                .nav-links.active {
+                    display: flex;
+                }
+
+            .dark-theme .nav-links {
+                background: #222;
+            }
+
+            .demo-container {
+                padding: 1rem;
+                margin: 1rem auto;
+            }
+
+            .screen-tabs {
+                gap: 0.3rem;
+            }
+
+            .screen-tab {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Dark/Light Theme Toggle Button -->
@@ -26,9 +242,13 @@
                 <img src="images/uploadencinvfile.ico" alt="BIF Uploader Logo">
                 <span>BIF Uploader</span>
             </div>
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </div>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#demo">Demo</a></li>
                 <li><a href="#download">Download</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -73,6 +293,13 @@
                     </div>
                     <h3>Credential Management</h3>
                     <p>Securely store multiple credential profiles for different Invoice Cloud environments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Scheduled Uploads</h3>
+                    <p>Set up one-time or recurring scheduled tasks to automatically upload your invoice files when needed.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -133,16 +360,34 @@
                     <div class="step-number">4</div>
                     <div class="step-content">
                         <h3>Choose Upload Method</h3>
-                        <p>Select your preferred upload protocol (SOAP 1.1, SOAP 1.2, or HTTP POST).</p>
+                        <p>Select your preferred upload protocol (SOAP 1.1, SOAP 1.2, or HTTP POST) and decide whether to upload immediately or schedule for later.</p>
                     </div>
                 </div>
                 <div class="workflow-step">
                     <div class="step-number">5</div>
                     <div class="step-content">
                         <h3>Upload and Monitor</h3>
-                        <p>Click upload and track the progress in real-time through the operation log.</p>
+                        <p>Click upload to process immediately or set up a one-time/recurring schedule. Track all progress through the detailed operation log.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- New Demo Section with GIF -->
+        <section id="demo" class="demo">
+            <h2>See It In Action</h2>
+            <div class="demo-container">
+                <div class="screen-tabs">
+                    <button class="screen-tab active" data-screen="main">Main Interface</button>
+                    <button class="screen-tab" data-screen="file-select">File Selection</button>
+                    <button class="screen-tab" data-screen="editor">File Editor</button>
+                    <button class="screen-tab" data-screen="scheduler">Task Scheduler</button>
+                    <button class="screen-tab" data-screen="results">Upload Results</button>
+                </div>
+                <img src="images/app-demo.gif" alt="BIF Uploader Application Demo" class="demo-gif" id="demo-gif">
+                <p class="demo-caption" id="demo-caption">
+                    The BIF Uploader features an intuitive user interface that guides you through the entire process from file selection to successful upload. Switch between tabs above to see different aspects of the application.
+                </p>
             </div>
         </section>
 
@@ -157,7 +402,7 @@
                     <p>For Windows 10 and 11</p>
                     <p>Version 1.2.0</p>
                     <p>Released: May 19, 2025</p>
-                    <a href="https://drive.google.com/drive/folders/1EO5GsGr58nXPOVEfGEKmAAyTDbdDFH5X?usp=sharing" class="btn primary" id="download-btn">Download</a>
+                    <a href="https://drive.google.com/drive/folders/1EO5GsGr58nXPOVEfGEKmAAyTDbdDFH5X?usp=sharing" class="btn primary" id="download-btn" target="_blank" rel="noopener">Download</a>
                 </div>
                 <div class="requirements">
                     <h4>System Requirements</h4>
@@ -172,6 +417,7 @@
             <div class="changelog">
                 <h4>What's New in Version 2.1.0</h4>
                 <ul>
+                    <li><i class="fas fa-plus-circle"></i> Added scheduled task capabilities for one-time and recurring uploads</li>
                     <li><i class="fas fa-plus-circle"></i> Added BIF file editing capabilities</li>
                     <li><i class="fas fa-plus-circle"></i> Improved BIF file format validation</li>
                     <li><i class="fas fa-plus-circle"></i> Better error handling and reporting</li>
@@ -211,6 +457,15 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
+                        Can I schedule my invoice uploads?
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! BIF Uploader offers flexible scheduling options. You can set up one-time scheduled tasks for future uploads or recurring tasks (daily, weekly, monthly) to automate your regular invoice processes. The application will handle the uploads automatically according to your schedule, even when you're not at your computer.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
                         Can I edit my BIF files in the application?
                         <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
                     </div>
@@ -225,6 +480,15 @@
                     </div>
                     <div class="faq-answer">
                         <p>No! BIF Uploader intelligently detects whether your file is already encoded. If it's not, the application will automatically encode it for you during the upload process. You can simply select your raw BIF file and the application handles everything else.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do scheduled uploads work?
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To schedule an upload, simply prepare your BIF file as usual, then instead of clicking "Upload Now," select "Schedule Upload" and choose your preferred timing. You can set a one-time future date/time or configure a recurring schedule (daily, weekly, monthly). The application will run in the background and execute the upload task at the scheduled time. All activities will be logged for your review.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -384,6 +648,115 @@
                     console.log('Download button clicked');
                 });
             }
+
+            // Reveal animations on scroll
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.feature-card, .workflow-step, .demo-container');
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = 1;
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Set initial state for animated elements
+            document.querySelectorAll('.feature-card, .workflow-step, .demo-container').forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+
+            // Mobile menu toggle
+            const mobileMenuToggle = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function () {
+                    navLinks.classList.toggle('active');
+                    const icon = this.querySelector('i');
+                    if (navLinks.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
+
+            // Implement FAQ accordion functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function () {
+                    const answer = this.nextElementSibling;
+                    const isOpen = answer.style.maxHeight;
+
+                    // Close all answers
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        ans.style.maxHeight = null;
+                    });
+
+                    document.querySelectorAll('.toggle-icon i').forEach(icon => {
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    });
+
+                    // Open this answer if it was closed
+                    if (!isOpen) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        this.querySelector('.toggle-icon i').classList.remove('fa-chevron-down');
+                        this.querySelector('.toggle-icon i').classList.add('fa-chevron-up');
+                    }
+                });
+            });
+
+            // Demo GIF screen tabs functionality
+            const screenTabs = document.querySelectorAll('.screen-tab');
+            const demoGif = document.getElementById('demo-gif');
+            const demoCaption = document.getElementById('demo-caption');
+
+            // Define images and captions
+            const screens = {
+                'file-select': {
+                    src: 'images/file-select.gif',
+                    caption: 'Easily browse and select your BIF files. The application automatically detects file encoding types and prepares them for upload.'
+                },
+                'editor': {
+                    src: 'images/editor.gif',
+                    caption: 'Use the built-in editor to make quick changes to your BIF files without needing external tools.'
+                },
+                'scheduler': {
+                    src: 'images/scheduler.gif',
+                    caption: 'Set up one-time or recurring upload schedules to automate your invoice uploads even when you\'re away.'
+                },
+                'results': {
+                    src: 'images/results.gif',
+                    caption: 'View detailed results of your uploads including success status, file GUIDs, and comprehensive logs for troubleshooting.'
+                }
+            };
+
+            // Screen tab click handler
+            screenTabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Update active tab
+                    screenTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Update GIF source and caption
+                    const screen = this.getAttribute('data-screen');
+                    if (screens[screen]) {
+                        demoGif.src = screens[screen].src;
+                        demoCaption.textContent = screens[screen].caption;
+                    }
+                });
+            });
         });
     </script>
 </body>
