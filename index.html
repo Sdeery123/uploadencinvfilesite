@@ -9,6 +9,127 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="images/uploadencinvfile.ico" type="image/x-icon">
     <style>
+        /* Beta section styles */
+        .beta-link {
+            position: relative;
+            font-weight: bold;
+            color: #007bff !important;
+        }
+
+        .beta-badge {
+            background: #ff5722;
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 10px;
+            margin-left: 5px;
+            animation: pulse-orange 2s infinite;
+        }
+
+        @keyframes pulse-orange {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255,87,34, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 8px rgba(255,87,34, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255,87,34, 0);
+            }
+        }
+
+        .beta-section {
+            background: linear-gradient(135deg, #007bff15, #00c3ff10);
+            border-radius: 15px;
+            padding: 3rem;
+            margin: 2rem auto;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #007bff;
+        }
+
+            .beta-section::before {
+                content: "BETA";
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: #ff5722;
+                color: white;
+                padding: 5px 15px;
+                font-weight: bold;
+                font-size: 0.8rem;
+                border-radius: 5px;
+                transform: rotate(5deg);
+            }
+
+        .beta-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .beta-feature {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .beta-feature:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            }
+
+        .beta-icon {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .beta-download-btn {
+            background: linear-gradient(135deg, #ff5722, #ff9800);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-top: 2rem;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(255,87,34,0.3);
+            transition: all 0.3s ease;
+            animation: pulse-orange 2s infinite;
+        }
+
+            .beta-download-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(255,87,34,0.4);
+            }
+
+        .dark-theme .beta-feature {
+            background: #2a2a2a;
+        }
+
+        .dark-theme .beta-section {
+            background: linear-gradient(135deg, #003166, #001a33);
+        }
+
+        @media (max-width: 768px) {
+            .beta-section {
+                padding: 2rem 1rem;
+            }
+
+            .beta-features {
+                grid-template-columns: 1fr;
+            }
+        }
         /* Enhanced visual elements */
         .feature-card, .download-card, .workflow-step {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -249,6 +370,7 @@
                 <li><a href="#features">Features</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#demo">Demo</a></li>
+                <li><a href="beta.html" class="beta-link">Beta 3.3.0 <span class="beta-badge">NEW</span></a></li>
                 <li><a href="#download">Download</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -391,42 +513,125 @@
             </div>
         </section>
 
-        
-<section id="download" class="download">
-    <h2>Download BIF Uploader</h2>
-    <div class="download-options">
-        <div class="download-card">
-            <div class="download-icon">
-                <i class="fab fa-windows"></i>
-            </div>
-            <h3>Windows (64-bit)</h3>
-            <p>For Windows 10 and 11</p>
-            <p>Version 1.2.0</p>
-            <p>Released: May 19, 2025</p>
-            <a href="https://drive.google.com/drive/folders/1EO5GsGr58nXPOVEfGEKmAAyTDbdDFH5X?usp=sharing" class="btn primary" id="download-btn" target="_blank" rel="noopener">Download</a>
-        </div>
+        <!-- Add this before the download section -->
+        <section class="beta-promo">
+            <div class="beta-promo-banner">
+                <div class="beta-promo-content">
+                    <h2><i class="fas fa-flask"></i> Try Our New Beta 3.3.0</h2>
+                    <p>Experience the next generation of BIF Uploader with integrated SQL database management, invoice syncing, and balance tracking.</p>
+                    <a href="beta.html" class="beta-promo-btn">Explore the Beta <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
 
-        <!-- New Beta Version Card -->
-        <div class="download-card">
-            <div class="download-icon">
-                <i class="fas fa-flask"></i>
-            </div>
-            <h3>New Beta SQL Invoice DB Management</h3>
-            <p>Beta Version 3.1.2</p>
-            <p>Experimental features for invoice database integration</p>
-            <a href="https://drive.google.com/drive/folders/1UQ4SI-T2MPSgqXyemZHgD-V8JYf2oDNJ?usp=sharing" class="btn secondary" target="_blank" rel="noopener">Download Beta</a>
-        </div>
+        <style>
+            .beta-promo {
+                margin: 3rem auto;
+            }
 
-        <div class="requirements">
-            <h4>System Requirements</h4>
-            <ul>
-                <li><i class="fas fa-check"></i> Windows 10 or Windows 11</li>
-                <li><i class="fas fa-check"></i> .NET 8.0 Runtime</li>
-                <li><i class="fas fa-check"></i> 100 MB available disk space</li>
-                <li><i class="fas fa-check"></i> Internet connection for uploads</li>
-            </ul>
-        </div>
-    </div>
+            .beta-promo-banner {
+                background: linear-gradient(135deg, #6C5CE7, #4834d4);
+                border-radius: 15px;
+                padding: 2.5rem;
+                color: white;
+                box-shadow: 0 10px 30px rgba(108, 92, 231, 0.3);
+                position: relative;
+                overflow: hidden;
+            }
+
+                .beta-promo-banner::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L100 0 L100 100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+                    background-size: 300px;
+                    opacity: 0.3;
+                }
+
+            .beta-promo-content {
+                position: relative;
+                z-index: 1;
+                text-align: center;
+            }
+
+                .beta-promo-content h2 {
+                    font-size: 2.2rem;
+                    margin-bottom: 1rem;
+                }
+
+                .beta-promo-content p {
+                    font-size: 1.2rem;
+                    max-width: 800px;
+                    margin: 0 auto 1.5rem;
+                    opacity: 0.9;
+                }
+
+            .beta-promo-btn {
+                display: inline-block;
+                background: white;
+                color: #6C5CE7;
+                padding: 12px 30px;
+                border-radius: 30px;
+                font-weight: bold;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+
+                .beta-promo-btn:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+                }
+
+                .beta-promo-btn i {
+                    margin-left: 8px;
+                    transition: transform 0.3s ease;
+                }
+
+                .beta-promo-btn:hover i {
+                    transform: translateX(5px);
+                }
+        </style>
+
+
+        <section id="download" class="download">
+            <h2>Download BIF Uploader</h2>
+            <div class="download-options">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fab fa-windows"></i>
+                    </div>
+                    <h3>Windows (64-bit)</h3>
+                    <p>For Windows 10 and 11</p>
+                    <p>Version 1.2.0</p>
+                    <p>Released: May 19, 2025</p>
+                    <a href="https://drive.google.com/drive/folders/1EO5GsGr58nXPOVEfGEKmAAyTDbdDFH5X?usp=sharing" class="btn primary" id="download-btn" target="_blank" rel="noopener">Download</a>
+                </div>
+
+                <!-- New Beta Version Card -->
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>New Beta SQL Invoice DB Management</h3>
+                    <p>Beta Version 3.1.2</p>
+                    <p>Experimental features for invoice database integration</p>
+                    <a href="https://drive.google.com/drive/folders/1UQ4SI-T2MPSgqXyemZHgD-V8JYf2oDNJ?usp=sharing" class="btn secondary" target="_blank" rel="noopener">Download Beta</a>
+                </div>
+
+                <div class="requirements">
+                    <h4>System Requirements</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Windows 10 or Windows 11</li>
+                        <li><i class="fas fa-check"></i> .NET 8.0 Runtime</li>
+                        <li><i class="fas fa-check"></i> 100 MB available disk space</li>
+                        <li><i class="fas fa-check"></i> Internet connection for uploads</li>
+                    </ul>
+                </div>
+            </div>
 
         </section>
 

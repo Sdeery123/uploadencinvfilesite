@@ -1,0 +1,619 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BIF Uploader Beta 3.3.0 - Advanced SQL Database Integration and Invoice Management">
+    <title>BIF Uploader Beta 3.3.0 - SQL Database Integration</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/beta-styles.css">
+    <link rel="stylesheet" href="styles/gitbook.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/uploadencinvfile.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Dark/Light Theme Toggle Button -->
+    <div id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Back to top button -->
+    <div id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/uploadencinvfile.ico" alt="BIF Uploader Logo">
+                <span>BIF Uploader <span class="beta-badge">BETA 3.3.0</span></span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#compatibility">Database Support</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
+                <li><a href="#documentation">Documentation</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="index.html">Main Version</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <div class="hero-content">
+                <h1>BIF Uploader Beta 3.3.0</h1>
+                <p>Introducing advanced SQL database integration, invoice syncing, and comprehensive invoice management in our newest beta release.</p>
+                <div class="cta-buttons">
+                    <a href="#download" class="btn primary">Download Beta</a>
+                    <a href="#features" class="btn secondary">Explore Features</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/beta-screenshot.png" alt="BIF Uploader Beta SQL Database Management" />
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-to-main"><i class="fas fa-arrow-left"></i> Back to Main Version</a>
+
+        <div class="warning">
+            <h4><i class="fas fa-exclamation-triangle"></i> Beta Software Notice</h4>
+            <p>This is a beta release intended for testing and feedback. While thoroughly tested, some features may still be under development. Please back up any important data before use.</p>
+        </div>
+
+        <section id="features" class="features">
+            <h2>New Features in Beta 3.3.0</h2>
+            <p class="section-intro">Experience our most powerful version yet, with a complete SQL database backend and integrated invoice management system.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>SQL Database Integration</h3>
+                    <p>Store and manage all your invoice data in a robust SQL database, with support for multiple database engines.</p>
+                    <ul>
+                        <li>Automatic schema creation and migration</li>
+                        <li>Optimized data storage and retrieval</li>
+                        <li>Configurable data retention policies</li>
+                        <li>Automatic database maintenance</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Real-time Invoice Syncing</h3>
+                    <p>Keep your local database in sync with Invoice Cloud for up-to-date records of all invoice statuses.</p>
+                    <ul>
+                        <li>Configurable sync intervals (15 minutes to daily)</li>
+                        <li>Background synchronization with progress tracking</li>
+                        <li>Selective sync by date range or invoice status</li>
+                        <li>Detailed sync logs and error handling</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Balance Tracking & Updates</h3>
+                    <p>Monitor payment status and balance changes for all invoices with comprehensive reporting tools.</p>
+                    <ul>
+                        <li>Real-time balance updates and history</li>
+                        <li>Payment status tracking and notifications</li>
+                        <li>Customizable reports with filtering options</li>
+                        <li>Data export to Excel, CSV, or PDF formats</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Smart Balance Conflict Resolution</h3>
+                    <p>Automatically detect and resolve balance discrepancies between your local database and Invoice Cloud.</p>
+                    <ul>
+                        <li>Intelligent conflict detection algorithm</li>
+                        <li>Smart recommendation engine based on balance comparison</li>
+                        <li>Manual or automatic conflict resolution options</li>
+                        <li>Audit trail of all conflict resolutions</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Advanced Search & Filtering</h3>
+                    <p>Quickly find specific invoices with powerful search capabilities across all stored data.</p>
+                    <ul>
+                        <li>Full-text search across all invoice fields</li>
+                        <li>Filter by date, status, amount, or custom fields</li>
+                        <li>Save and reuse common search queries</li>
+                        <li>Bulk operations on search results</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Enhanced Security</h3>
+                    <p>Improved credential management with database encryption and role-based access controls.</p>
+                    <ul>
+                        <li>Encrypted credential storage in the database</li>
+                        <li>Configurable database encryption</li>
+                        <li>Role-based access control for multi-user setups</li>
+                        <li>Comprehensive audit logging for all operations</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Performance Dashboard</h3>
+                    <p>Get a comprehensive overview of your invoice operations with a customizable dashboard.</p>
+                    <ul>
+                        <li>Visual reports and key performance indicators</li>
+                        <li>Upload success rates and error tracking</li>
+                        <li>Database health monitoring</li>
+                        <li>System resource usage metrics</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitBook-style Documentation Section -->
+        <section id="documentation" class="documentation">
+            <h2>Documentation &amp; Guides</h2>
+            <p class="section-intro">Comprehensive guides to help you get the most out of BIF Uploader Beta 3.3.0</p>
+
+            <div class="gitbook-container">
+                <!-- Sidebar Navigation -->
+                <aside class="gitbook-sidebar">
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Getting Started</h3>
+                        <ul class="sidebar-links">
+                            <li><a href="#overview" class="active">Overview</a></li>
+                            <li><a href="#installation">Installation</a></li>
+                            <li><a href="#first-time-setup">First-time Setup</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Database Integration</h3>
+                        <ul class="sidebar-links">
+                            <li><a href="#database-connection">Database Connection</a></li>
+                            <li><a href="#schema-management">Schema Management</a></li>
+                            <li><a href="#data-migration">Data Migration</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Synchronization</h3>
+                        <ul class="sidebar-links">
+                            <li><a href="#sync-overview">Sync Overview</a></li>
+                            <li><a href="#conflict-resolution">Conflict Resolution</a></li>
+                            <li><a href="#scheduled-sync">Scheduled Sync</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Advanced Topics</h3>
+                        <ul class="sidebar-links">
+                            <li><a href="#security-encryption">Security & Encryption</a></li>
+                            <li><a href="#logging-diagnostics">Logging & Diagnostics</a></li>
+                            <li><a href="#troubleshooting">Troubleshooting</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Main Documentation Content -->
+                <div class="gitbook-content">
+                    <div id="overview" class="doc-section">
+                        <h2 class="doc-title">Overview</h2>
+                        <p>BIF Uploader Beta 3.3.0 is our most advanced version yet, featuring SQL database integration, bidirectional sync with Invoice Cloud, and comprehensive invoice management.</p>
+
+                        <div class="info-callout">
+                            <div class="callout-header"><i class="fas fa-info-circle"></i> About This Documentation</div>
+                            <p>This documentation provides detailed information on how to set up and use the new features in the Beta 3.3.0 release. For basic BIF Uploader functionality, please refer to the main documentation.</p>
+                        </div>
+
+                        <h3 class="doc-subtitle">What's New in Beta 3.3.0</h3>
+                        <ul class="doc-list">
+                            <li><strong>SQL Database Integration</strong> - Store and manage invoice data in SQL databases</li>
+                            <li><strong>Bidirectional Sync</strong> - Keep your local database and Invoice Cloud in perfect sync</li>
+                            <li><strong>Advanced Logging</strong> - Comprehensive logging system with filtering and analytics</li>
+                            <li><strong>Enhanced Security</strong> - Improved credential management and encryption</li>
+                        </ul>
+                    </div>
+
+                    <div id="installation" class="doc-section">
+                        <h2 class="doc-title">Installation Guide</h2>
+                        <p>Installing BIF Uploader Beta 3.3.0 is straightforward and can be done alongside your existing stable version.</p>
+
+                        <div class="steps-container">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Download the Installer</h4>
+                                    <p>Download the Beta 3.3.0 installer from the official download page.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Run the Installer</h4>
+                                    <p>Run the installer and follow the on-screen prompts. The Beta version will be installed in a separate directory.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Configure Database Connection</h4>
+                                    <p>Once installed, you'll need to set up your database connection before you can use the new features.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="warning-callout">
+                            <div class="callout-header"><i class="fas fa-exclamation-triangle"></i> Important</div>
+                            <p>The Beta version should not be used in production environments. Always back up your data before testing new features.</p>
+                        </div>
+                    </div>
+
+                    <div id="database-connection" class="doc-section">
+                        <h2 class="doc-title">Database Connection Setup</h2>
+                        <p>BIF Uploader Beta 3.3.0 supports multiple database engines. Here's how to set up your database connection:</p>
+
+                        <h3 class="doc-subtitle">Connection String Examples</h3>
+
+                        <div class="tabs-container">
+                            <div class="tabs-header">
+                                <button class="tab-button active" data-tab="sqlserver">SQL Server</button>
+                                <button class="tab-button" data-tab="sqlite">SQLite</button>
+                                <button class="tab-button" data-tab="mysql">MySQL</button>
+                                <button class="tab-button" data-tab="postgres">PostgreSQL</button>
+                            </div>
+
+                            <div id="sqlserver" class="tab-content active">
+                                <div class="code-block">
+                                    <pre>Server=myServerAddress;Database=BIFUploader;User Id=myUsername;Password=myPassword;</pre>
+                                </div>
+                                <p>For SQL Server, you'll need to provide the server address, database name, and credentials. If using Windows Authentication, you can use:</p>
+                                <div class="code-block">
+                                    <pre>Server=myServerAddress;Database=BIFUploader;Trusted_Connection=True;</pre>
+                                </div>
+                            </div>
+
+                            <div id="sqlite" class="tab-content">
+                                <div class="code-block">
+                                    <pre>Data Source=C:\Path\To\BIFUploader.db;</pre>
+                                </div>
+                                <p>SQLite is file-based and doesn't require a separate server. Simply specify the path to the database file.</p>
+                            </div>
+
+                            <div id="mysql" class="tab-content">
+                                <div class="code-block">
+                                    <pre>Server=myServerAddress;Database=BIFUploader;Uid=myUsername;Pwd=myPassword;</pre>
+                                </div>
+                                <p>MySQL connections require the server address, database name, and credentials.</p>
+                            </div>
+
+                            <div id="postgres" class="tab-content">
+                                <div class="code-block">
+                                    <pre>Host=myServerAddress;Database=BIFUploader;Username=myUsername;Password=myPassword;</pre>
+                                </div>
+                                <p>PostgreSQL connections follow a similar pattern but with different parameter names.</p>
+                            </div>
+                        </div>
+
+                        <h3 class="doc-subtitle">Configuration Steps</h3>
+                        <ol class="numbered-list">
+                            <li>Open BIF Uploader Beta and navigate to Settings > Database</li>
+                            <li>Select your database engine from the dropdown</li>
+                            <li>Enter your connection details or connection string</li>
+                            <li>Click "Test Connection" to verify connectivity</li>
+                            <li>Click "Save" to store your configuration</li>
+                        </ol>
+
+                        <div class="tip-callout">
+                            <div class="callout-header"><i class="fas fa-lightbulb"></i> Tip</div>
+                            <p>For development and testing, SQLite provides the simplest setup with no additional server requirements. For production use, we recommend SQL Server or PostgreSQL for their robust features and performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="compatibility" class="compatibility">
+            <h2>Database Compatibility</h2>
+            <p>The Beta 3.3.0 release supports multiple database engines, giving you flexibility in how you store and manage your invoice data.</p>
+
+            <div class="db-logos">
+                <div class="db-logo sqlserver">
+                    <i class="fas fa-database"></i>
+                    <span>SQL Server</span>
+                </div>
+                <div class="db-logo sqlite">
+                    <i class="fas fa-file-alt"></i>
+                    <span>SQLite</span>
+                </div>
+                <div class="db-logo mysql">
+                    <i class="fas fa-database"></i>
+                    <span>MySQL</span>
+                </div>
+                <div class="db-logo postgres">
+                    <i class="fas fa-elephant"></i>
+                    <span>PostgreSQL</span>
+                </div>
+            </div>
+
+            <h3>System Requirements</h3>
+            <ul>
+                <li><strong>Operating System:</strong> Windows 10 or Windows 11</li>
+                <li><strong>Framework:</strong> .NET 8.0 Runtime (included in installer)</li>
+                <li><strong>Disk Space:</strong> 150 MB for application, additional space for database</li>
+                <li><strong>Memory:</strong> 4 GB RAM minimum, 8 GB recommended</li>
+                <li><strong>Database:</strong> SQL Server 2016+, SQLite 3+, MySQL 5.7+, or PostgreSQL 10+</li>
+            </ul>
+        </section>
+
+        <section id="screenshots" class="screenshots">
+            <h2>Beta 3.3.0 in Action</h2>
+
+            <div class="screenshot">
+                <img src="images/beta-dashboard.png" alt="BIF Uploader Beta Dashboard with SQL Integration" />
+                <p>The new dashboard provides a comprehensive view of your invoice data with real-time metrics.</p>
+            </div>
+
+            <div class="screenshot">
+                <img src="images/beta-invoice-sync.gif" alt="Invoice Sync Interface" />
+                <p>Configure and monitor invoice synchronization between your local database and Invoice Cloud.</p>
+            </div>
+
+            <div class="screenshot">
+                <img src="images/beta-database-settings.gif" alt="Database Configuration Interface" />
+                <p>Easy-to-use interface for configuring your database connection and maintenance settings.</p>
+            </div>
+        </section>
+
+        <section id="sync-details" class="sync-details">
+            <h2>Advanced Synchronization Technology</h2>
+
+            <div class="sync-feature-container">
+                <div class="sync-feature">
+                    <h3><i class="fas fa-exchange-alt"></i> Bidirectional Sync</h3>
+                    <p>BIF Uploader Beta 3.3.0 features a sophisticated bidirectional synchronization system that keeps your local SQL database and Invoice Cloud perfectly in sync.</p>
+
+                    <div class="sync-image">
+                        <img src="images/sync-conflict-dialog.gif" alt="Balance Conflict Resolution Dialog" />
+                        <p class="image-caption">The Balance Conflict Resolution Dialog helps you make informed decisions when discrepancies are detected.</p>
+                    </div>
+
+                    <h4>Smart Balance Conflict Resolution</h4>
+                    <p>When the system detects differences between local and cloud invoice data, our intelligent conflict resolution system analyzes the nature of the discrepancy and makes smart recommendations:</p>
+
+                    <ul class="conflict-options">
+                        <li><strong>Cloud Balance Lower:</strong> If Invoice Cloud shows a lower balance, the system recommends using cloud data, as this typically indicates a payment was made through Invoice Cloud.</li>
+                        <li><strong>Local Balance Lower:</strong> If your local database shows a lower balance, the system recommends using local data, which might indicate an adjustment that should be pushed to Invoice Cloud.</li>
+                        <li><strong>User Control:</strong> You can always override recommendations and choose to use local data, cloud data, or skip synchronization entirely for any invoice.</li>
+                        <li><strong>Automatic Mode:</strong> Set your preferred conflict resolution strategy to be applied automatically without interruption.</li>
+                    </ul>
+
+                    <div class="resolution-flow">
+                        <div class="flow-step">
+                            <span class="step-number">1</span>
+                            <span class="step-text">Conflict Detected</span>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <span class="step-number">2</span>
+                            <span class="step-text">Analysis & Recommendation</span>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <span class="step-number">3</span>
+                            <span class="step-text">User Decision or Auto-Resolution</span>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <span class="step-number">4</span>
+                            <span class="step-text">Synchronized Data</span>
+                        </div>
+                    </div>
+
+                    <h4>Missing Invoice Detection & Upload</h4>
+                    <p>One of the most powerful features of the new sync engine is its ability to detect invoices that exist in your local database but not in Invoice Cloud. When this happens:</p>
+
+                    <ul>
+                        <li>The system automatically identifies invoices that need to be uploaded to Invoice Cloud</li>
+                        <li>Invoices are prepared with the correct format and encoding</li>
+                        <li>A secure upload process pushes the invoices to Invoice Cloud</li>
+                        <li>The system verifies successful upload and updates the local database with confirmation</li>
+                        <li>All activity is logged with detailed tracking for audit purposes</li>
+                    </ul>
+
+                    <div class="note-box">
+                        <h5><i class="fas fa-lightbulb"></i> Pro Tip</h5>
+                        <p>This feature is particularly valuable for organizations that create invoices offline or import them from other systems. You can simply add invoices to your local database, and the sync process will automatically upload them to Invoice Cloud without requiring manual BIF file creation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="log-management" class="log-management">
+            <h2>Advanced Logging & Diagnostics</h2>
+
+            <div class="sync-feature-container">
+                <div class="sync-feature">
+                    <h3><i class="fas fa-file-alt"></i> Comprehensive Log Management</h3>
+                    <p>BIF Uploader Beta 3.3.0 introduces a powerful new log management system with real-time monitoring, advanced filtering, and performance diagnostics.</p>
+
+                    <div class="sync-image">
+                        <img src="images/log-viewer.png" alt="Advanced Log Viewer and Diagnostics Interface" />
+                        <p class="image-caption">The new Log Viewer provides detailed insights into application operations with powerful filtering and analysis tools.</p>
+                    </div>
+
+                    <div class="feature-grid" style="margin-top: 2.5rem;">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-filter"></i>
+                            </div>
+                            <h3>Multi-Level Filtering</h3>
+                            <p>Quickly find the information you need with comprehensive filtering options.</p>
+                            <ul>
+                                <li>Filter by log type (Application, Scheduled Upload, Manual Upload)</li>
+                                <li>Filter by severity level (Info, Warning, Error, Success)</li>
+                                <li>Filter by date range with precise time controls</li>
+                                <li>Full-text search across all log entries</li>
+                            </ul>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Real-Time Performance Metrics</h3>
+                            <p>Monitor application health and performance with live diagnostic data.</p>
+                            <ul>
+                                <li>CPU and memory usage tracking</li>
+                                <li>Application uptime monitoring</li>
+                                <li>I/O operation counters</li>
+                                <li>Garbage collection statistics</li>
+                            </ul>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <h3>Intelligent Log Management</h3>
+                            <p>Keep your system optimized with advanced log maintenance features.</p>
+                            <ul>
+                                <li>Configurable log retention policies</li>
+                                <li>Automatic cleanup of old log files</li>
+                                <li>Log size management for optimal performance</li>
+                                <li>Export logs to CSV for external analysis</li>
+                            </ul>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                            <h3>Detailed Inspection</h3>
+                            <p>Dive deep into specific operations with comprehensive log details.</p>
+                            <ul>
+                                <li>View complete log file contents</li>
+                                <li>Contextual information including source code location</li>
+                                <li>Detailed stack traces for error diagnostics</li>
+                                <li>Correlation tracking between related operations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h4>Advanced Logging Architecture</h4>
+                    <p>The new logging system is built on a sophisticated architecture that provides exceptional detail while maintaining high performance:</p>
+
+                    <ul>
+                        <li><strong>Intelligent Message Categorization:</strong> Automatically analyzes log messages to determine appropriate severity levels using advanced pattern recognition.</li>
+                        <li><strong>Contextual Information:</strong> Captures detailed context including source code location, thread information, and operation correlations.</li>
+                        <li><strong>Optimized Storage:</strong> Uses efficient log rotation and compression to minimize disk space usage while maintaining comprehensive history.</li>
+                        <li><strong>Real-time Monitoring:</strong> Provides live updates of application performance metrics to quickly identify potential issues.</li>
+                    </ul>
+
+                    <div class="note-box">
+                        <h5><i class="fas fa-lightbulb"></i> Pro Tip</h5>
+                        <p>The new log viewer is particularly valuable for troubleshooting complex synchronization issues. When diagnosing sync problems, use the date filter to focus on the time period of the issue, then search for specific invoice numbers to track their complete processing history.</p>
+                    </div>
+
+                    <h4>Performance Impact Analysis</h4>
+                    <p>For the first time, BIF Uploader provides detailed insights into how different operations affect system resources:</p>
+
+                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin: 2rem 0;">
+                        <div style="flex-basis: 48%; min-width: 300px; background: rgba(108, 92, 231, 0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem;">
+                            <h5 style="margin-bottom: 1rem; color: var(--accent-color);"><i class="fas fa-upload"></i> Upload Operations</h5>
+                            <ul style="padding-left: 1.5rem;">
+                                <li>CPU impact: <strong>Medium</strong></li>
+                                <li>Memory impact: <strong>Low</strong></li>
+                                <li>Typical duration: <strong>2-5 seconds per invoice</strong></li>
+                                <li>Network impact: <strong>High (depends on file size)</strong></li>
+                            </ul>
+                        </div>
+
+                        <div style="flex-basis: 48%; min-width: 300px; background: rgba(108, 92, 231, 0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem;">
+                            <h5 style="margin-bottom: 1rem; color: var(--accent-color);"><i class="fas fa-sync"></i> Sync Operations</h5>
+                            <ul style="padding-left: 1.5rem;">
+                                <li>CPU impact: <strong>High</strong></li>
+                                <li>Memory impact: <strong>Medium</strong></li>
+                                <li>Typical duration: <strong>1-30 minutes (depends on data volume)</strong></li>
+                                <li>Database impact: <strong>High</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download">
+            <h2>Download BIF Uploader Beta 3.3.0</h2>
+            <p>Experience the next generation of BIF Uploader with these powerful new features.</p>
+
+            <div style="text-align: center; margin: 3rem 0;">
+                <a href="https://drive.google.com/drive/folders/1UQ4SI-T2MPSgqXyemZHgD-V8JYf2oDNJ?usp=sharing" class="download-btn" target="_blank" rel="noopener">
+                    <i class="fas fa-download"></i> Download Beta 3.3.0
+                </a>
+                <p style="margin-top: 1rem; color: #666;">Released: June 15, 2023 | Size: 36 MB</p>
+            </div>
+
+            <div class="warning">
+                <h4>Important Notes</h4>
+                <ul>
+                    <li>This is a beta release and should not be used in production environments.</li>
+                    <li>Please report any bugs or issues to our support team.</li>
+                    <li>The beta can be installed alongside the stable version without conflicts.</li>
+                </ul>
+            </div>
+        </section>
+
+        <a href="index.html" class="back-to-main"><i class="fas fa-arrow-left"></i> Back to Main Version</a>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/uploadencinvfile.ico" alt="BIF Uploader Logo">
+                <span>BIF Uploader <span class="beta-badge">BETA</span></span>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Beta Program</h4>
+                    <ul>
+                        <li><a href="#features">New Features</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="mailto:sdeery@invoicecloud.com">Report Issues</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html">Main Version</a></li>
+                        <li><a href="https://github.com/Sdeery123/uploadencodedinvfile" target="_blank" rel="noopener">GitHub Repository</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 BIF Uploader. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/beta-scripts.js"></script>
+</body>
+</html>
