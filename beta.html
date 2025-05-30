@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BIF Uploader Beta 3.3.0 - Advanced SQL Database Integration and Invoice Management">
-    <title>BIF Uploader Beta 3.3.0 - SQL Database Integration</title>
+    <meta name="description" content="InvoiceSync Suite Beta 4.0 - REST API Integration, New Dashboard UI, and Advanced SQL Database Features">
+    <title>InvoiceSync Suite Beta 4.0 - REST API Integration & Enhanced Dashboard</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/beta-styles.css">
     <link rel="stylesheet" href="styles/gitbook.css">
@@ -25,8 +25,8 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="images/uploadencinvfile.ico" alt="BIF Uploader Logo">
-                <span>BIF Uploader <span class="beta-badge">BETA 3.3.0</span></span>
+                <img src="images/uploadencinvfile.ico" alt="InvoiceSync Suite Logo">
+                <span>InvoiceSync Suite <span class="beta-badge">BETA 4.0</span></span>
             </div>
             <div class="menu-toggle" id="mobile-menu" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
@@ -42,15 +42,15 @@
         </nav>
         <div class="hero">
             <div class="hero-content">
-                <h1>BIF Uploader Beta 3.3.0</h1>
-                <p>Introducing advanced SQL database integration, invoice syncing, and comprehensive invoice management in our newest beta release.</p>
+                <h1>InvoiceSync Suite Beta 4.0</h1>
+                <p>Introducing REST API integration, a completely redesigned dashboard UI, and enhanced SQL database management in our newest beta release.</p>
                 <div class="cta-buttons">
                     <a href="#download" class="btn primary">Download Beta</a>
                     <a href="#features" class="btn secondary">Explore Features</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="images/beta-screenshot.png" alt="BIF Uploader Beta SQL Database Management" />
+                <img src="images/beta-screenshot.png" alt="InvoiceSync Suite Beta 4.0 Dashboard" />
             </div>
         </div>
     </header>
@@ -64,10 +64,38 @@
         </div>
 
         <section id="features" class="features">
-            <h2>New Features in Beta 3.3.0</h2>
-            <p class="section-intro">Experience our most powerful version yet, with a complete SQL database backend and integrated invoice management system.</p>
+            <h2>New Features in Beta 4.0</h2>
+            <p class="section-intro">Experience our most powerful version yet, with REST API integration, a redesigned dashboard, and enhanced SQL database management.</p>
 
             <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>REST API Integration</h3>
+                    <p>Upload invoices directly via REST API with secure API key authentication for improved performance and reliability.</p>
+                    <ul>
+                        <li>Simplified API key-based authentication</li>
+                        <li>Faster uploads compared to SOAP</li>
+                        <li>Improved error handling and validation</li>
+                        <li>Secure credential storage</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Redesigned Dashboard</h3>
+                    <p>A completely reimagined user interface with intuitive controls and real-time data visualization.</p>
+                    <ul>
+                        <li>Modern, responsive design with light/dark mode</li>
+                        <li>Customizable widgets and data cards</li>
+                        <li>Interactive charts and performance metrics</li>
+                        <li>Streamlined navigation and workflow</li>
+                    </ul>
+                </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-database"></i>
@@ -112,6 +140,20 @@
 
                 <div class="feature-card">
                     <div class="feature-icon">
+                        <i class="fas fa-window-restore"></i>
+                    </div>
+                    <h3>Popup Windows Architecture</h3>
+                    <p>Enhanced user experience with dedicated popup windows for key features instead of embedded controls.</p>
+                    <ul>
+                        <li>Resizable windows for better workflow management</li>
+                        <li>Multi-monitor support for power users</li>
+                        <li>Persistent window states and positions</li>
+                        <li>Independent scroll capabilities for data-rich views</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
                         <i class="fas fa-balance-scale"></i>
                     </div>
                     <h3>Smart Balance Conflict Resolution</h3>
@@ -126,43 +168,15 @@
 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3>Advanced Search & Filtering</h3>
-                    <p>Quickly find specific invoices with powerful search capabilities across all stored data.</p>
-                    <ul>
-                        <li>Full-text search across all invoice fields</li>
-                        <li>Filter by date, status, amount, or custom fields</li>
-                        <li>Save and reuse common search queries</li>
-                        <li>Bulk operations on search results</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Enhanced Security</h3>
                     <p>Improved credential management with database encryption and role-based access controls.</p>
                     <ul>
                         <li>Encrypted credential storage in the database</li>
-                        <li>Configurable database encryption</li>
+                        <li>Secure API key management for REST uploads</li>
                         <li>Role-based access control for multi-user setups</li>
                         <li>Comprehensive audit logging for all operations</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <h3>Performance Dashboard</h3>
-                    <p>Get a comprehensive overview of your invoice operations with a customizable dashboard.</p>
-                    <ul>
-                        <li>Visual reports and key performance indicators</li>
-                        <li>Upload success rates and error tracking</li>
-                        <li>Database health monitoring</li>
-                        <li>System resource usage metrics</li>
                     </ul>
                 </div>
             </div>
@@ -171,7 +185,7 @@
         <!-- GitBook-style Documentation Section -->
         <section id="documentation" class="documentation">
             <h2>Documentation &amp; Guides</h2>
-            <p class="section-intro">Comprehensive guides to help you get the most out of BIF Uploader Beta 3.3.0</p>
+            <p class="section-intro">Comprehensive guides to help you get the most out of InvoiceSync Suite Beta 4.0</p>
 
             <div class="gitbook-container">
                 <!-- Sidebar Navigation -->
@@ -182,6 +196,15 @@
                             <li><a href="#overview" class="active">Overview</a></li>
                             <li><a href="#installation">Installation</a></li>
                             <li><a href="#first-time-setup">First-time Setup</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">REST API Integration</h3>
+                        <ul class="sidebar-links">
+                            <li><a href="#rest-api-key">API Key Setup</a></li>
+                            <li><a href="#rest-vs-soap">REST vs SOAP</a></li>
+                            <li><a href="#api-troubleshooting">Troubleshooting</a></li>
                         </ul>
                     </div>
 
@@ -202,74 +225,71 @@
                             <li><a href="#scheduled-sync">Scheduled Sync</a></li>
                         </ul>
                     </div>
-
-                    <div class="sidebar-section">
-                        <h3 class="sidebar-title">Advanced Topics</h3>
-                        <ul class="sidebar-links">
-                            <li><a href="#security-encryption">Security & Encryption</a></li>
-                            <li><a href="#logging-diagnostics">Logging & Diagnostics</a></li>
-                            <li><a href="#troubleshooting">Troubleshooting</a></li>
-                        </ul>
-                    </div>
                 </aside>
 
                 <!-- Main Documentation Content -->
                 <div class="gitbook-content">
                     <div id="overview" class="doc-section">
                         <h2 class="doc-title">Overview</h2>
-                        <p>BIF Uploader Beta 3.3.0 is our most advanced version yet, featuring SQL database integration, bidirectional sync with Invoice Cloud, and comprehensive invoice management.</p>
+                        <p>InvoiceSync Suite Beta 4.0 represents a major evolution with REST API integration, a completely redesigned dashboard UI, popup windows architecture, and comprehensive SQL database integration.</p>
 
                         <div class="info-callout">
                             <div class="callout-header"><i class="fas fa-info-circle"></i> About This Documentation</div>
-                            <p>This documentation provides detailed information on how to set up and use the new features in the Beta 3.3.0 release. For basic BIF Uploader functionality, please refer to the main documentation.</p>
+                            <p>This documentation provides detailed information on how to set up and use the new features in the Beta 4.0 release. For basic functionality, please refer to the main documentation.</p>
                         </div>
 
-                        <h3 class="doc-subtitle">What's New in Beta 3.3.0</h3>
+                        <h3 class="doc-subtitle">What's New in Beta 4.0</h3>
                         <ul class="doc-list">
+                            <li><strong>REST API Integration</strong> - Upload invoices using secure API key authentication</li>
+                            <li><strong>Redesigned Dashboard</strong> - Modern, intuitive interface with customizable widgets</li>
+                            <li><strong>Popup Windows Architecture</strong> - Dedicated windows for enhanced usability</li>
                             <li><strong>SQL Database Integration</strong> - Store and manage invoice data in SQL databases</li>
-                            <li><strong>Bidirectional Sync</strong> - Keep your local database and Invoice Cloud in perfect sync</li>
-                            <li><strong>Advanced Logging</strong> - Comprehensive logging system with filtering and analytics</li>
-                            <li><strong>Enhanced Security</strong> - Improved credential management and encryption</li>
                         </ul>
                     </div>
 
-                    <div id="installation" class="doc-section">
-                        <h2 class="doc-title">Installation Guide</h2>
-                        <p>Installing BIF Uploader Beta 3.3.0 is straightforward and can be done alongside your existing stable version.</p>
+                    <div id="rest-api-key" class="doc-section">
+                        <h2 class="doc-title">REST API Key Setup</h2>
+                        <p>InvoiceSync Suite Beta 4.0 introduces direct REST API integration with Invoice Cloud, providing a simpler and more efficient upload method.</p>
 
                         <div class="steps-container">
                             <div class="step">
                                 <div class="step-number">1</div>
                                 <div class="step-content">
-                                    <h4>Download the Installer</h4>
-                                    <p>Download the Beta 3.3.0 installer from the official download page.</p>
+                                    <h4>Obtain Your API Key</h4>
+                                    <p>Contact your Invoice Cloud representative to obtain your REST API key.</p>
                                 </div>
                             </div>
                             <div class="step">
                                 <div class="step-number">2</div>
                                 <div class="step-content">
-                                    <h4>Run the Installer</h4>
-                                    <p>Run the installer and follow the on-screen prompts. The Beta version will be installed in a separate directory.</p>
+                                    <h4>Configure InvoiceSync Suite</h4>
+                                    <p>In the application, select "REST API" as your upload format and enter your API key in the credentials section.</p>
                                 </div>
                             </div>
                             <div class="step">
                                 <div class="step-number">3</div>
                                 <div class="step-content">
-                                    <h4>Configure Database Connection</h4>
-                                    <p>Once installed, you'll need to set up your database connection before you can use the new features.</p>
+                                    <h4>Save Your Configuration</h4>
+                                    <p>Check "Save credentials for future use" to securely store your API key for subsequent uploads.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="warning-callout">
-                            <div class="callout-header"><i class="fas fa-exclamation-triangle"></i> Important</div>
-                            <p>The Beta version should not be used in production environments. Always back up your data before testing new features.</p>
+                        <div class="tip-callout">
+                            <div class="callout-header"><i class="fas fa-lightbulb"></i> Benefits of REST API</div>
+                            <p>REST API uploads offer several advantages over traditional SOAP methods:</p>
+                            <ul>
+                                <li>Simplified authentication with single API key instead of multiple credentials</li>
+                                <li>Improved performance with faster upload times</li>
+                                <li>Better error handling and more detailed response information</li>
+                                <li>Modern integration standard with better compatibility</li>
+                            </ul>
                         </div>
                     </div>
 
                     <div id="database-connection" class="doc-section">
                         <h2 class="doc-title">Database Connection Setup</h2>
-                        <p>BIF Uploader Beta 3.3.0 supports multiple database engines. Here's how to set up your database connection:</p>
+                        <p>InvoiceSync Suite Beta 4.0 supports multiple database engines. Here's how to set up your database connection:</p>
 
                         <h3 class="doc-subtitle">Connection String Examples</h3>
 
@@ -283,48 +303,34 @@
 
                             <div id="sqlserver" class="tab-content active">
                                 <div class="code-block">
-                                    <pre>Server=myServerAddress;Database=BIFUploader;User Id=myUsername;Password=myPassword;</pre>
+                                    <pre>Server=myServerAddress;Database=InvoiceSyncSuite;User Id=myUsername;Password=myPassword;</pre>
                                 </div>
                                 <p>For SQL Server, you'll need to provide the server address, database name, and credentials. If using Windows Authentication, you can use:</p>
                                 <div class="code-block">
-                                    <pre>Server=myServerAddress;Database=BIFUploader;Trusted_Connection=True;</pre>
+                                    <pre>Server=myServerAddress;Database=InvoiceSyncSuite;Trusted_Connection=True;</pre>
                                 </div>
                             </div>
 
                             <div id="sqlite" class="tab-content">
                                 <div class="code-block">
-                                    <pre>Data Source=C:\Path\To\BIFUploader.db;</pre>
+                                    <pre>Data Source=C:\Path\To\InvoiceSyncSuite.db;</pre>
                                 </div>
                                 <p>SQLite is file-based and doesn't require a separate server. Simply specify the path to the database file.</p>
                             </div>
 
                             <div id="mysql" class="tab-content">
                                 <div class="code-block">
-                                    <pre>Server=myServerAddress;Database=BIFUploader;Uid=myUsername;Pwd=myPassword;</pre>
+                                    <pre>Server=myServerAddress;Database=InvoiceSyncSuite;Uid=myUsername;Pwd=myPassword;</pre>
                                 </div>
                                 <p>MySQL connections require the server address, database name, and credentials.</p>
                             </div>
 
                             <div id="postgres" class="tab-content">
                                 <div class="code-block">
-                                    <pre>Host=myServerAddress;Database=BIFUploader;Username=myUsername;Password=myPassword;</pre>
+                                    <pre>Host=myServerAddress;Database=InvoiceSyncSuite;Username=myUsername;Password=myPassword;</pre>
                                 </div>
                                 <p>PostgreSQL connections follow a similar pattern but with different parameter names.</p>
                             </div>
-                        </div>
-
-                        <h3 class="doc-subtitle">Configuration Steps</h3>
-                        <ol class="numbered-list">
-                            <li>Open BIF Uploader Beta and navigate to Settings > Database</li>
-                            <li>Select your database engine from the dropdown</li>
-                            <li>Enter your connection details or connection string</li>
-                            <li>Click "Test Connection" to verify connectivity</li>
-                            <li>Click "Save" to store your configuration</li>
-                        </ol>
-
-                        <div class="tip-callout">
-                            <div class="callout-header"><i class="fas fa-lightbulb"></i> Tip</div>
-                            <p>For development and testing, SQLite provides the simplest setup with no additional server requirements. For production use, we recommend SQL Server or PostgreSQL for their robust features and performance.</p>
                         </div>
                     </div>
                 </div>
@@ -333,7 +339,7 @@
 
         <section id="compatibility" class="compatibility">
             <h2>Database Compatibility</h2>
-            <p>The Beta 3.3.0 release supports multiple database engines, giving you flexibility in how you store and manage your invoice data.</p>
+            <p>The Beta 4.0 release supports multiple database engines, giving you flexibility in how you store and manage your invoice data.</p>
 
             <div class="db-logos">
                 <div class="db-logo sqlserver">
@@ -365,195 +371,163 @@
         </section>
 
         <section id="screenshots" class="screenshots">
-            <h2>Beta 3.3.0 in Action</h2>
+            <h2>Beta 4.0 in Action</h2>
 
             <div class="screenshot">
-                <img src="images/beta-dashboard.png" alt="BIF Uploader Beta Dashboard with SQL Integration" />
-                <p>The new dashboard provides a comprehensive view of your invoice data with real-time metrics.</p>
+                <img src="images/beta-dashboard.png" alt="InvoiceSync Suite Beta 4.0 Dashboard" />
+                <p>The completely redesigned dashboard provides a modern interface with customizable widgets and real-time metrics.</p>
             </div>
 
             <div class="screenshot">
                 <img src="images/beta-invoice-sync.gif" alt="Invoice Sync Interface" />
-                <p>Configure and monitor invoice synchronization between your local database and Invoice Cloud.</p>
+                <p>Configure and monitor invoice synchronization between your local database and Invoice Cloud with the new intuitive interface.</p>
             </div>
 
             <div class="screenshot">
                 <img src="images/beta-database-settings.gif" alt="Database Configuration Interface" />
-                <p>Easy-to-use interface for configuring your database connection and maintenance settings.</p>
+                <p>Easy-to-use interface for configuring your database connection and maintenance settings with improved visual feedback.</p>
             </div>
         </section>
 
-        <section id="sync-details" class="sync-details">
-            <h2>Advanced Synchronization Technology</h2>
+        <section id="rest-api-features" class="sync-details">
+            <h2>REST API Integration</h2>
 
             <div class="sync-feature-container">
                 <div class="sync-feature">
-                    <h3><i class="fas fa-exchange-alt"></i> Bidirectional Sync</h3>
-                    <p>BIF Uploader Beta 3.3.0 features a sophisticated bidirectional synchronization system that keeps your local SQL database and Invoice Cloud perfectly in sync.</p>
+                    <h3><i class="fas fa-cloud-upload-alt"></i> Simplified File Uploads with REST API</h3>
+                    <p>InvoiceSync Suite Beta 4.0 introduces a powerful REST API integration that significantly simplifies the invoice upload process.</p>
 
                     <div class="sync-image">
-                        <img src="images/sync-conflict-dialog.gif" alt="Balance Conflict Resolution Dialog" />
-                        <p class="image-caption">The Balance Conflict Resolution Dialog helps you make informed decisions when discrepancies are detected.</p>
+                        <img src="images/rest-api-upload.gif" alt="REST API Upload Interface" />
+                        <p class="image-caption">The new REST API upload interface provides a streamlined experience with clear progress indicators and improved error handling.</p>
                     </div>
 
-                    <h4>Smart Balance Conflict Resolution</h4>
-                    <p>When the system detects differences between local and cloud invoice data, our intelligent conflict resolution system analyzes the nature of the discrepancy and makes smart recommendations:</p>
+                    <h4>Key Benefits of REST API Integration</h4>
+                    <p>Our REST API implementation offers several important advantages over traditional SOAP-based methods:</p>
 
-                    <ul class="conflict-options">
-                        <li><strong>Cloud Balance Lower:</strong> If Invoice Cloud shows a lower balance, the system recommends using cloud data, as this typically indicates a payment was made through Invoice Cloud.</li>
-                        <li><strong>Local Balance Lower:</strong> If your local database shows a lower balance, the system recommends using local data, which might indicate an adjustment that should be pushed to Invoice Cloud.</li>
-                        <li><strong>User Control:</strong> You can always override recommendations and choose to use local data, cloud data, or skip synchronization entirely for any invoice.</li>
-                        <li><strong>Automatic Mode:</strong> Set your preferred conflict resolution strategy to be applied automatically without interruption.</li>
+                    <ul class="rest-benefits">
+                        <li><strong>Simplified Authentication:</strong> Use a single API key instead of juggling multiple credentials.</li>
+                        <li><strong>Improved Performance:</strong> REST API uploads are typically 40-60% faster than equivalent SOAP operations.</li>
+                        <li><strong>Better Error Handling:</strong> More specific error messages and detailed validation feedback.</li>
+                        <li><strong>Enhanced Security:</strong> API keys can be rotated and managed with finer access controls.</li>
+                        <li><strong>Modern Standard:</strong> REST APIs represent the current industry standard for web service integration.</li>
                     </ul>
 
-                    <div class="resolution-flow">
-                        <div class="flow-step">
-                            <span class="step-number">1</span>
-                            <span class="step-text">Conflict Detected</span>
-                        </div>
-                        <div class="flow-arrow">→</div>
-                        <div class="flow-step">
-                            <span class="step-number">2</span>
-                            <span class="step-text">Analysis & Recommendation</span>
-                        </div>
-                        <div class="flow-arrow">→</div>
-                        <div class="flow-step">
-                            <span class="step-number">3</span>
-                            <span class="step-text">User Decision or Auto-Resolution</span>
-                        </div>
-                        <div class="flow-arrow">→</div>
-                        <div class="flow-step">
-                            <span class="step-number">4</span>
-                            <span class="step-text">Synchronized Data</span>
-                        </div>
+                    <div class="comparison-table">
+                        <h4>REST vs. SOAP Comparison</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>REST API</th>
+                                    <th>SOAP API</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Authentication</td>
+                                    <td>Single API key</td>
+                                    <td>GUID + Web Service Key</td>
+                                </tr>
+                                <tr>
+                                    <td>Upload Speed</td>
+                                    <td>Faster (lightweight)</td>
+                                    <td>Slower (XML overhead)</td>
+                                </tr>
+                                <tr>
+                                    <td>Error Details</td>
+                                    <td>More specific with HTTP status codes</td>
+                                    <td>Generic SOAP fault messages</td>
+                                </tr>
+                                <tr>
+                                    <td>Implementation</td>
+                                    <td>Simpler, more modern</td>
+                                    <td>More complex protocol</td>
+                                </tr>
+                                <tr>
+                                    <td>Compatibility</td>
+                                    <td>Works with all modern platforms</td>
+                                    <td>May require specific SOAP libraries</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-
-                    <h4>Missing Invoice Detection & Upload</h4>
-                    <p>One of the most powerful features of the new sync engine is its ability to detect invoices that exist in your local database but not in Invoice Cloud. When this happens:</p>
-
-                    <ul>
-                        <li>The system automatically identifies invoices that need to be uploaded to Invoice Cloud</li>
-                        <li>Invoices are prepared with the correct format and encoding</li>
-                        <li>A secure upload process pushes the invoices to Invoice Cloud</li>
-                        <li>The system verifies successful upload and updates the local database with confirmation</li>
-                        <li>All activity is logged with detailed tracking for audit purposes</li>
-                    </ul>
 
                     <div class="note-box">
                         <h5><i class="fas fa-lightbulb"></i> Pro Tip</h5>
-                        <p>This feature is particularly valuable for organizations that create invoices offline or import them from other systems. You can simply add invoices to your local database, and the sync process will automatically upload them to Invoice Cloud without requiring manual BIF file creation.</p>
+                        <p>While both REST and SOAP upload options are supported, we recommend using REST API for all new implementations. The REST API provides better performance, simpler authentication, and more detailed error information.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="log-management" class="log-management">
-            <h2>Advanced Logging & Diagnostics</h2>
+        <section id="new-dashboard" class="log-management">
+            <h2>Redesigned Dashboard Experience</h2>
 
             <div class="sync-feature-container">
                 <div class="sync-feature">
-                    <h3><i class="fas fa-file-alt"></i> Comprehensive Log Management</h3>
-                    <p>BIF Uploader Beta 3.3.0 introduces a powerful new log management system with real-time monitoring, advanced filtering, and performance diagnostics.</p>
+                    <h3><i class="fas fa-desktop"></i> Modern, Intuitive User Interface</h3>
+                    <p>InvoiceSync Suite Beta 4.0 introduces a completely redesigned dashboard that enhances usability while providing powerful new features.</p>
 
                     <div class="sync-image">
-                        <img src="images/log-viewer.png" alt="Advanced Log Viewer and Diagnostics Interface" />
-                        <p class="image-caption">The new Log Viewer provides detailed insights into application operations with powerful filtering and analysis tools.</p>
+                        <img src="images/new-dashboard-ui.png" alt="Redesigned Dashboard Interface" />
+                        <p class="image-caption">The new dashboard offers a clean, modern interface with customizable widgets and real-time data visualization.</p>
                     </div>
 
                     <div class="feature-grid" style="margin-top: 2.5rem;">
                         <div class="feature-card">
                             <div class="feature-icon">
-                                <i class="fas fa-filter"></i>
+                                <i class="fas fa-window-maximize"></i>
                             </div>
-                            <h3>Multi-Level Filtering</h3>
-                            <p>Quickly find the information you need with comprehensive filtering options.</p>
+                            <h3>Popup Window Architecture</h3>
+                            <p>Key features now open in dedicated, resizable windows for improved usability.</p>
                             <ul>
-                                <li>Filter by log type (Application, Scheduled Upload, Manual Upload)</li>
-                                <li>Filter by severity level (Info, Warning, Error, Success)</li>
-                                <li>Filter by date range with precise time controls</li>
-                                <li>Full-text search across all log entries</li>
+                                <li>Independent windows for file uploads, database management, and more</li>
+                                <li>Resizable interfaces that adapt to your screen</li>
+                                <li>Multi-monitor support for power users</li>
+                                <li>Consistent styling across all application windows</li>
                             </ul>
                         </div>
 
                         <div class="feature-card">
                             <div class="feature-icon">
-                                <i class="fas fa-chart-line"></i>
+                                <i class="fas fa-palette"></i>
                             </div>
-                            <h3>Real-Time Performance Metrics</h3>
-                            <p>Monitor application health and performance with live diagnostic data.</p>
+                            <h3>Theming & Customization</h3>
+                            <p>Personalize your experience with theme options and layout customization.</p>
                             <ul>
-                                <li>CPU and memory usage tracking</li>
-                                <li>Application uptime monitoring</li>
-                                <li>I/O operation counters</li>
-                                <li>Garbage collection statistics</li>
+                                <li>Light and dark mode support</li>
+                                <li>Customizable color accents</li>
+                                <li>Adjustable UI density settings</li>
+                                <li>Persistent user preferences</li>
                             </ul>
                         </div>
 
                         <div class="feature-card">
                             <div class="feature-icon">
-                                <i class="fas fa-tasks"></i>
+                                <i class="fas fa-chart-pie"></i>
                             </div>
-                            <h3>Intelligent Log Management</h3>
-                            <p>Keep your system optimized with advanced log maintenance features.</p>
+                            <h3>Interactive Data Visualization</h3>
+                            <p>Understand your invoice data at a glance with powerful visual tools.</p>
                             <ul>
-                                <li>Configurable log retention policies</li>
-                                <li>Automatic cleanup of old log files</li>
-                                <li>Log size management for optimal performance</li>
-                                <li>Export logs to CSV for external analysis</li>
+                                <li>Real-time charts and graphs</li>
+                                <li>Drill-down capabilities for detailed analysis</li>
+                                <li>Custom filtering and grouping options</li>
+                                <li>Export visualizations for reporting</li>
                             </ul>
                         </div>
 
                         <div class="feature-card">
                             <div class="feature-icon">
-                                <i class="fas fa-search-plus"></i>
+                                <i class="fas fa-th-large"></i>
                             </div>
-                            <h3>Detailed Inspection</h3>
-                            <p>Dive deep into specific operations with comprehensive log details.</p>
+                            <h3>Customizable Dashboard</h3>
+                            <p>Create a personalized workspace with the information that matters most to you.</p>
                             <ul>
-                                <li>View complete log file contents</li>
-                                <li>Contextual information including source code location</li>
-                                <li>Detailed stack traces for error diagnostics</li>
-                                <li>Correlation tracking between related operations</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h4>Advanced Logging Architecture</h4>
-                    <p>The new logging system is built on a sophisticated architecture that provides exceptional detail while maintaining high performance:</p>
-
-                    <ul>
-                        <li><strong>Intelligent Message Categorization:</strong> Automatically analyzes log messages to determine appropriate severity levels using advanced pattern recognition.</li>
-                        <li><strong>Contextual Information:</strong> Captures detailed context including source code location, thread information, and operation correlations.</li>
-                        <li><strong>Optimized Storage:</strong> Uses efficient log rotation and compression to minimize disk space usage while maintaining comprehensive history.</li>
-                        <li><strong>Real-time Monitoring:</strong> Provides live updates of application performance metrics to quickly identify potential issues.</li>
-                    </ul>
-
-                    <div class="note-box">
-                        <h5><i class="fas fa-lightbulb"></i> Pro Tip</h5>
-                        <p>The new log viewer is particularly valuable for troubleshooting complex synchronization issues. When diagnosing sync problems, use the date filter to focus on the time period of the issue, then search for specific invoice numbers to track their complete processing history.</p>
-                    </div>
-
-                    <h4>Performance Impact Analysis</h4>
-                    <p>For the first time, BIF Uploader provides detailed insights into how different operations affect system resources:</p>
-
-                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin: 2rem 0;">
-                        <div style="flex-basis: 48%; min-width: 300px; background: rgba(108, 92, 231, 0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem;">
-                            <h5 style="margin-bottom: 1rem; color: var(--accent-color);"><i class="fas fa-upload"></i> Upload Operations</h5>
-                            <ul style="padding-left: 1.5rem;">
-                                <li>CPU impact: <strong>Medium</strong></li>
-                                <li>Memory impact: <strong>Low</strong></li>
-                                <li>Typical duration: <strong>2-5 seconds per invoice</strong></li>
-                                <li>Network impact: <strong>High (depends on file size)</strong></li>
-                            </ul>
-                        </div>
-
-                        <div style="flex-basis: 48%; min-width: 300px; background: rgba(108, 92, 231, 0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem;">
-                            <h5 style="margin-bottom: 1rem; color: var(--accent-color);"><i class="fas fa-sync"></i> Sync Operations</h5>
-                            <ul style="padding-left: 1.5rem;">
-                                <li>CPU impact: <strong>High</strong></li>
-                                <li>Memory impact: <strong>Medium</strong></li>
-                                <li>Typical duration: <strong>1-30 minutes (depends on data volume)</strong></li>
-                                <li>Database impact: <strong>High</strong></li>
+                                <li>Drag-and-drop widget positioning</li>
+                                <li>Add, remove, and resize widgets</li>
+                                <li>Filter widget data by date, status, and more</li>
+                                <li>Save multiple dashboard configurations</li>
                             </ul>
                         </div>
                     </div>
@@ -562,14 +536,14 @@
         </section>
 
         <section id="download" class="download">
-            <h2>Download BIF Uploader Beta 3.3.0</h2>
-            <p>Experience the next generation of BIF Uploader with these powerful new features.</p>
+            <h2>Download InvoiceSync Suite Beta 4.0</h2>
+            <p>Experience the next generation of invoice management with these powerful new features.</p>
 
             <div style="text-align: center; margin: 3rem 0;">
                 <a href="https://drive.google.com/drive/folders/1UQ4SI-T2MPSgqXyemZHgD-V8JYf2oDNJ?usp=sharing" class="download-btn" target="_blank" rel="noopener">
-                    <i class="fas fa-download"></i> Download Beta 3.3.0
+                    <i class="fas fa-download"></i> Download Beta 4.0
                 </a>
-                <p style="margin-top: 1rem; color: #666;">Released: June 15, 2023 | Size: 36 MB</p>
+                <p style="margin-top: 1rem; color: #666;">Released: May 15, 2023 | Size: 38 MB</p>
             </div>
 
             <div class="warning">
@@ -588,8 +562,8 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="images/uploadencinvfile.ico" alt="BIF Uploader Logo">
-                <span>BIF Uploader <span class="beta-badge">BETA</span></span>
+                <img src="images/uploadencinvfile.ico" alt="InvoiceSync Suite Logo">
+                <span>InvoiceSync Suite <span class="beta-badge">BETA</span></span>
             </div>
             <div class="footer-links">
                 <div class="link-group">
@@ -610,7 +584,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2023 BIF Uploader. All rights reserved.</p>
+            <p>&copy; 2023 InvoiceSync Suite. All rights reserved.</p>
         </div>
     </footer>
 
